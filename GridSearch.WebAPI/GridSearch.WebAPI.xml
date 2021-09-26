@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GridSearch.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:GridSearch.WebAPI.Controllers.TriangleSearchController.FetchTriangleCoordinates(GridSearch.WebAPI.Model.SearchByName)">
+            <summary>
+            Fetches triangle coordinates for a given grid and triangle reference name
+            </summary>
+            <remarks>
+            Sample Request:
+            
+                POST ​/api​/TriangleSearch​/by-name
+                {
+                    "name": "F1",
+                    "maxGridHeight": 60,
+                    "maxGridWidth": 60,
+                    "rightAngleSideLength": 10
+                }
+                
+            Sample Response:
+            
+                {
+                  "name": "F1",
+                  "topVertexX": 0,
+                  "topVertexY": 10,
+                  "rightAngleVertexX": 0,
+                  "rightAngleVertexY": 0,
+                  "bottomVertexX": 10,
+                  "bottomVertexY": 0
+                }
+            </remarks>
+        </member>
+        <member name="M:GridSearch.WebAPI.Controllers.TriangleSearchController.FetchTriangleName(GridSearch.WebAPI.Model.SearchByCoordinates)">
+            <summary>
+            Fetches triangle name for a given set of coordinates
+            </summary>
+            <remarks>
+            Sample Request:
+            
+                POST ​/api​/TriangleSearch​/by-coordinates
+                {
+                    "maxGridHeight": 60,
+                    "maxGridWidth": 60,
+                    "rightAngleSideLength": 10,
+                    "topVertexX": 50,
+                    "topVertexY": 60,
+                    "rightAngleVertexX": 60,
+                    "rightAngleVertexY": 60,
+                    "bottomVertexX": 60,
+                    "bottomVertexY": 50
+                }
+                
+            Sample Response:
+            
+                {
+                  "name": "A12",
+                  "topVertexX": 50,
+                  "topVertexY": 60,
+                  "rightAngleVertexX": 60,
+                  "rightAngleVertexY": 60,
+                  "bottomVertexX": 60,
+                  "bottomVertexY": 50
+                }
+            </remarks>
+        </member>
+    </members>
+</doc>
